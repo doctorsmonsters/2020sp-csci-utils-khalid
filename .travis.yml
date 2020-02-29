@@ -1,4 +1,5 @@
 language: python
+python: 3.7
 dist: xenial
 cache: false
 env:
@@ -8,14 +9,6 @@ env:
 matrix:
   include:
     - python: '3.6'
-      env:
-        - TOXENV=check
-    - env:
-        - TOXENV=py27
-      python: '2.7'
-    - env:
-        - TOXENV=py35
-      python: '3.5'
     - env:
         - TOXENV=py36
       python: '3.6'
@@ -25,13 +18,6 @@ matrix:
     - env:
         - TOXENV=py38
       python: '3.8'
-    - env:
-        - TOXENV=pypy
-      python: 'pypy'
-    - env:
-        - TOXENV=pypy3
-        - TOXPYTHON=pypy3
-      python: 'pypy3'
 before_install:
   - python --version
   - uname -a
@@ -41,7 +27,7 @@ install:
   - virtualenv --version
   - easy_install --version
   - pip --version
-  - tox --version
+  - tox-travis --version
 script:
   - tox -v
 after_failure:
