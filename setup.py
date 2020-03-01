@@ -20,7 +20,11 @@ DOCKER_DEV = literal_eval(os.environ.get("DEV_CSCI_UTILS", "0"))
 
 def read(*names, **kwargs):
     try:
-        ...
+        with io.open(
+            join(dirname(__file__), *names),
+            encoding=kwargs.get('encoding', 'utf8')
+        ) as fh:
+            return fh.read()
     except FileNotFoundError:
         if DOCKER_DEV:
             return ""
@@ -72,7 +76,7 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
+        'atomicwrites>=1.3.0'
     ],
     extras_require={
         # eg:
@@ -81,7 +85,6 @@ setup(
     },
     setup_requires=[
         'setuptools_scm>=3.3.1',
-        'atomicwrites>=1.3.0'
     ],
     entry_points={
         'console_scripts': [
