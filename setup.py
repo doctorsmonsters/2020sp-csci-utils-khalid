@@ -14,23 +14,25 @@ from os.path import splitext
 from setuptools import find_packages
 from setuptools import setup
 
+from ast import literal_eval
+import os
+DOCKER_DEV = literal_eval(os.environ.get("DEV_CSCI_UTILS", "0"))
 
 def read(*names, **kwargs):
-    with io.open(
-        join(dirname(__file__), *names),
-        encoding=kwargs.get('encoding', 'utf8')
-    ) as fh:
-        return fh.read()
+    try:
+        ...
+    except FileNotFoundError:
+        if DOCKER_DEV:
+            return ""
+        raise
 
 
 setup(
     name='csci-utils',
     use_scm_version={
-        'local_scheme': 'dirty-tag',
         'write_to': 'src/csci_utils/_version.py',
-        'fallback_version': '0.0.0',
-    },
-    description='An example package. Generated with cookiecutter-pylibrary.',
+    } if not DOCKER_DEV else False,
+    description='Utilities Package',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
@@ -79,6 +81,7 @@ setup(
     },
     setup_requires=[
         'setuptools_scm>=3.3.1',
+        'atomicwrites>=1.3.0'
     ],
     entry_points={
         'console_scripts': [
