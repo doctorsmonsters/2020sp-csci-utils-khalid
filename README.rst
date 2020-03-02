@@ -9,7 +9,6 @@ Overview
 
     * - tests
       - | |travis|
-        |
         | |codeclimate|
     * - package
       - | |commits-since|
@@ -18,11 +17,12 @@ Overview
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/doctorsmonsters/2020sp-csci-utils-doctorsmonsters
 
-.. |codeclimate| image:: https://codeclimate.com/github/doctorsmonsters/2020sp-csci-utils-doctorsmonsters/badges/gpa.svg
-   :target: https://codeclimate.com/github/doctorsmonsters/2020sp-csci-utils-doctorsmonsters
-   :alt: CodeClimate Quality Status
+.. |codeclimate| image:: https://api.codeclimate.com/v1/badges/feba4c5a512835d74e98/maintainability
+   :target: https://codeclimate.com/github/doctorsmonsters/2020sp-csci-utils-doctorsmonsters/maintainability
+   :alt: Maintainability
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/doctorsmonsters/2020sp-csci-utils-doctorsmonsters/v0.0.0.svg
+
+.. |commits-since| image:: https://img.shields.io/github/commits-since/doctorsmonsters/2020sp-csci-utils-doctorsmonsters/v0.1.0.svg
     :alt: Commits since latest release
     :target: https://github.com/doctorsmonsters/2020sp-csci-utils-doctorsmonsters/compare/v0.0.0...master
 
