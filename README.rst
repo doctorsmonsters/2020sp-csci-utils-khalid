@@ -14,7 +14,7 @@ Overview
     * - package
       - | |commits-since|
 
-.. |travis| image:: https://api.travis-ci.org/doctorsmonsters/2020sp-csci-utils-doctorsmonsters.svg?branch=master
+.. |travis| image:: https://travis-ci.com/doctorsmonsters/2020sp-csci-utils-doctorsmonsters.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/doctorsmonsters/2020sp-csci-utils-doctorsmonsters
 
