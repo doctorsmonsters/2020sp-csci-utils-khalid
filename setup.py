@@ -45,7 +45,7 @@ setup(
     author_email='khalid.nwb@gmail.com',
     url='https://github.com/doctorsmonsters/2020sp-csci-utils-doctorsmonsters',
     packages=find_packages('src'),
-    package_dir={'': 'src'},
+    package_dir={'': 'srcsrc/csci_utils/'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     include_package_data=True,
     zip_safe=False,
