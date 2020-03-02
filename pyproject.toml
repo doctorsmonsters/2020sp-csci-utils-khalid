@@ -4,5 +4,3 @@ requires = [
     "wheel",
     "setuptools_scm[toml]>=3.4",
 ]
-# pyproject.toml
-[tool.setuptools_scm]
