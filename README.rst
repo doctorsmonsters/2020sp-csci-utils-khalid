@@ -23,7 +23,7 @@ Overview
 
 .. |commits-since| image:: https://img.shields.io/github/commits-since/csci-e-29/2020sp-csci-utils-nawab/v0.1.0.svg
     :alt: Commits since latest release
-    :target: https://github.com/csci-e-29/2020sp-csci-utils-nawab/compare/v0.0.0...master
+    :target: https://github.com/csci-e-29/2020sp-csci-utils-nawab/compare/v0.1.0...master
 
 
 
